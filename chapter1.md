@@ -1,40 +1,44 @@
+# The final product
+
+[A Hacker News clone written in AngularJS.](http://robbyronk.github.io/angular-news/#/)
+
 # Models, Binding, Controllers and Scope
 
-Lets start by creating the simplest possible Angular app.
-
+Let's start by creating the simplest possible Angular app.
+Create index.html and save the lines below to it. Replace my name
+with yours.
 ```
 <html>
   <head>
   </head>
   <body>
-    <h1>Whats up, robbyronk?</h1>
+    <h1>What's up, Robby?</h1>
   </body>
 </html>
 ```
-Replace robbyronk with your github name.
+Go ahead and open it up in your web browser.
+
+Time to turn this simple HTML page into an Angular app.
 
 First, include the Angular JavaScript in the `<head>` tag.
 
 ```
 <head>
-  <script src="angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
 </head>
 ```
 
-Second, change the opening `<html>` tag to `<html ng-app>`.
-Now we have an Angular app, but it doesnt do anything yet.
-Lets have it do the addition for us. Replace your github name with
-`{{'YourGithubName'}}`. Notice the single quotes.
-
+Next, change the opening `<html>` tag to `<html ng-app>`.
+Then, change the `<h1>` line like below. Notice the single quotes!
 ```
-<h1>Whats up, {{'robbyronk'}}</h1>
+<h1>Whats up, {{'Robby'}}?</h1>
 ```
 
-Refresh the page to see your app. Isnt that spectacular?
+Refresh the page to see your app. Not much of an app yet, eh?
 
 Lets make it do something.
 
-Add the following line right below the `h1` tag, changing my name for your name.
+Add the following line right below the `<h1>` tag, changing my name for your name.
 
 ```
 <input type="text" ng-model="name" value="robbyronk">
@@ -55,7 +59,7 @@ Open up a new file named "main.js". Type in this:
 
 ```
 function MainController($scope) {
-  $scope.name = 'robbyronk';
+  $scope.name = 'Robby';
 }
 ```
 
@@ -71,7 +75,7 @@ and we will talk much more about it. For now though, lets move on.
 Change "main.js" to look like this.
 ```
 function MainController($scope) {
-  $scope.name = 'robbyronk';
+  $scope.name = 'Robby';
 
   $scope.posts = [
     'The Internet is for Cats',
